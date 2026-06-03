@@ -1,4 +1,5 @@
 import { Globe2 } from 'lucide-react';
+import { FR, ES, US} from 'country-flag-icons/react/3x2';
 
 const languages = [
   {
@@ -8,7 +9,7 @@ const languages = [
     levelCode: 'C2',
     description:
       'Mother tongue. Deep fluency in professional, academic, and everyday contexts.',
-    flag: 've',
+    flag: <ES title="España" className="w-10 h-auto rounded-md shadow-sm " />,
     accentColor: 'border-amber-300',
     badgeBg: 'bg-amber-50',
     badgeText: 'text-amber-700',
@@ -23,7 +24,7 @@ const languages = [
     levelCode: 'C2',
     description:
       'Highly proficient across all professional domains — instruction, writing, and executive communication.',
-    flag: 'us',
+    flag: <US title="USA" className="w-10 h-auto rounded-md shadow-sm " />,
     accentColor: 'border-teal-300',
     badgeBg: 'bg-teal-50',
     badgeText: 'text-teal-700',
@@ -35,16 +36,16 @@ const languages = [
     name: 'French',
     native: false,
     level: 'Professional Working Proficiency',
-    levelCode: 'B2',
+    levelCode: 'C1',
     description:
       'Solid working proficiency for professional interaction, reading, and written communication.',
-    flag: 'fr',
+    flag: <FR title="Francia" className="w-10 h-auto rounded-md shadow-sm " />,
     accentColor: 'border-slate-300',
     badgeBg: 'bg-slate-100',
     badgeText: 'text-slate-700',
-    dotColor: 'bg-slate-500',
-    barColor: 'bg-slate-600',
-    barWidth: 'w-[70%]',
+    dotColor: 'bg-indigo-800',
+    barColor: 'bg-indigo-800',
+    barWidth: 'w-[80%]',
   },
 ];
 
@@ -52,7 +53,7 @@ const cefr = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
 export default function LanguageProficiency() {
   return (
-    <section id="languages" className="py-24 lg:py-32 bg-slate-900 overflow-hidden">
+    <section id="languages" className="py-24 lg:py-32 bg-white overflow-hidden">
       {/* Background decorative element */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-teal-900/20 blur-3xl" />
@@ -62,13 +63,13 @@ export default function LanguageProficiency() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="max-w-2xl mb-16">
-          <p className="font-inter text-teal-400 text-sm font-semibold tracking-widest uppercase mb-4">
+          <p className="font-inter text-teal-700 text-sm font-semibold tracking-widest uppercase mb-4">
             Language Proficiency
           </p>
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
+          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-slate-800 leading-tight mb-5">
             Communication Without Borders
           </h2>
-          <p className="font-inter text-slate-400 text-lg leading-relaxed">
+          <p className="font-inter text-slate-500 text-lg leading-relaxed">
             Multilingualism is not just a skill — it is the foundation of every
             program designed and every connection made.
           </p>
@@ -79,12 +80,12 @@ export default function LanguageProficiency() {
           {languages.map((lang) => (
             <div
               key={lang.name}
-              className={`group bg-white/5 border border-white/10 hover:border-white/20 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8`}
+              className={`group border bg-slate-900 border-white/10 hover:border-white/20 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800`}
             >
               {/* Top row */}
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <span className="text-3xl mb-3 block">{lang.flag}</span>
+                  {lang.flag}
                   <h3 className="font-playfair text-2xl font-bold text-white">{lang.name}</h3>
                 </div>
                 <div className="text-right">
@@ -137,8 +138,8 @@ export default function LanguageProficiency() {
         </div>
 
         {/* Bottom note */}
-        <div className="flex items-center gap-3 text-slate-500 text-sm font-inter">
-          <Globe2 size={16} className="text-teal-600" />
+        <div className="flex items-center gap-3 text-slate-700 text-sm font-inter">
+          <Globe2 size={16} className="text-teal-700" />
           <span>Proficiency levels aligned with the Common European Framework of Reference (CEFR)</span>
         </div>
       </div>

@@ -80,17 +80,17 @@ export default function ExperienceTimeline() {
   const [active, setActive] = useState(1);
 
   return (
-    <section id="experience" className="py-24 lg:py-32 bg-white">
+    <section id="experience" className="py-24 lg:py-32 bg-slate-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="max-w-2xl mb-16">
           <p className="font-inter text-teal-700 text-sm font-semibold tracking-widest uppercase mb-4">
             Professional Experience
           </p>
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-5">
+          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
             A Career Built on Impact
           </h2>
-          <p className="font-inter text-slate-500 text-lg leading-relaxed">
+          <p className="font-inter text-slate-400 text-lg leading-relaxed">
             Each role has deepened expertise in language education, instructional design, and organizational development.
           </p>
         </div>
@@ -104,8 +104,8 @@ export default function ExperienceTimeline() {
                 onClick={() => setActive(exp.id)}
                 className={`group w-full text-left rounded-xl border p-5 transition-all duration-300 ${
                   active === exp.id
-                    ? 'bg-slate-900 border-slate-900 shadow-lg shadow-slate-900/20'
-                    : 'bg-white border-stone-200 hover:border-slate-300 hover:bg-stone-50'
+                    ? 'bg-white border-stone-200 hover:border-slate-300 hover:bg-stone-50'
+                    : 'bg-slate-900 border-slate-900 shadow-lg shadow-slate-900/20'
                 }`}
               >
                 <div className="flex items-start justify-between gap-3">
@@ -122,8 +122,8 @@ export default function ExperienceTimeline() {
                       <span
                         className={`text-xs font-inter px-2 py-0.5 rounded-full ${
                           active === exp.id
-                            ? 'bg-teal-900/60 text-teal-300'
-                            : 'bg-stone-100 text-slate-500'
+                            ? 'bg-stone-100 font-bold text-teal-500'
+                            : 'bg-teal-900/60 text-teal-300'
                         }`}
                       >
                         {exp.type}
@@ -132,14 +132,14 @@ export default function ExperienceTimeline() {
 
                     <h3
                       className={`font-playfair font-semibold text-base leading-snug ${
-                        active === exp.id ? 'text-white' : 'text-slate-800'
+                        active === exp.id ?  'text-slate-800': 'text-white'
                       }`}
                     >
                       {exp.title}
                     </h3>
                     <p
                       className={`font-inter text-sm mt-1 ${
-                        active === exp.id ? 'text-slate-400' : 'text-slate-500'
+                        active === exp.id ? 'text-slate-500' :'text-slate-400' 
                       }`}
                     >
                       {exp.company}
@@ -148,7 +148,7 @@ export default function ExperienceTimeline() {
                   <ChevronDown
                     size={16}
                     className={`flex-shrink-0 mt-1 transition-transform duration-200 ${
-                      active === exp.id ? 'rotate-180 text-teal-400' : 'text-slate-400'
+                      active === exp.id ?  'text-slate-400': 'rotate-180 text-teal-400'
                     }`}
                   />
                 </div>
@@ -188,7 +188,7 @@ export default function ExperienceTimeline() {
                 <div className="h-px bg-stone-200 mb-8" />
 
                 {/* Achievements */}
-                <p className="font-inter text-xs font-semibold tracking-widest uppercase text-slate-400 mb-5">
+                <p className="font-inter text-xs font-bold tracking-widest uppercase text-slate-500 mb-5">
                   Key Achievements
                 </p>
                 <ul className="space-y-4">
