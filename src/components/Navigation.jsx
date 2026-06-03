@@ -31,7 +31,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-18 flex items-center justify-between py-4">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 group">
-          <div className="size-15 rounded-lg bg-teal-700 flex items-center justify-center">
+          <div className="size-15 rounded-full bg-teal-700 flex items-center justify-center">
             <img src="Logo.png" alt="" />
           </div>
           {/* <span className={`font-playfair font-semibold text-lg tracking-tight transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`}>
